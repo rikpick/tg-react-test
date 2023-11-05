@@ -54,7 +54,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
-            {addedItems}
+            `${addedItems}`
         </div>
     );
 };
