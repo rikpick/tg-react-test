@@ -54,6 +54,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
+            {addedItems}
         </div>
     );
 };
