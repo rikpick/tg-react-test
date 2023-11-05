@@ -11,7 +11,7 @@ const products = [
     {id: '5', title: '5g', price: '2999', description: '5 gr'},
 ]
 
-const getTotalPrice = (items) => {
+const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
         return acc += item.price
     }, 0)
@@ -28,7 +28,7 @@ const ProductList = () => {
         let newItems = [];
 
         if(alreadyAdded) {
-            newItems = addedItems.filter(item => item.id === product.id);
+            newItems = addedItems.filter(item => item.id !== product.id);
         } else {
             newItems = [...addedItems, product]
         }
@@ -46,17 +46,15 @@ const ProductList = () => {
 
     }
     return (
-       <div className={'list'}>
-        {products.map(item => {
-            <ProductItem
-               product={item}
-               onAdd={onAdd}
-               className={'item'}
-            />
-        })}
-123123
-
-       </div>
+        <div className={'list'}>
+            {products.map(item => (
+                <ProductItem
+                    product={item}
+                    onAdd={onAdd}
+                    className={'item'}
+                />
+            ))}
+        </div>
     );
 };
 
