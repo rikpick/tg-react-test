@@ -36,6 +36,7 @@
 .price-and-title {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     font-size: 12px;
     margin-bottom: 5px;
 }
