@@ -1,6 +1,7 @@
 import React from "react";
 import './productitem.css';
 import Button from "../button/button";
+import clever from "public\clever.png"
 
 const ProductItem = ({product, className, onAdd}) => {
     
@@ -10,7 +11,7 @@ const ProductItem = ({product, className, onAdd}) => {
     
     return (
        <div className={'product ' + className}>
-         <div className={'img'}/>
+         <div className={'img'}><img src={clever}/></div>
          <div className={'title'}>{product.title}</div>
          <div className={'description'}>{product.description}</div>
          <div className={'price'}>
