@@ -62,7 +62,7 @@ const ProductList = () => {
             tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-                color: rgb(9, 109, 9)
+                color: "#096d09"
             });
         }
 
