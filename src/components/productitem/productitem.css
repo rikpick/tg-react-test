@@ -34,6 +34,11 @@
     border-radius: 6px;
 }
 
+.add-btn:active {
+    background-color: rgb(13, 126, 13);
+    transform: translateY(1px);
+}
+
 .price-and-title {
     display: flex;
     flex-direction: row;
