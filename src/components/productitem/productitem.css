@@ -42,7 +42,7 @@
 .price-and-title {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    justify-content: space-between;
     font-size: 12px;
     margin-bottom: 5px;
 }
