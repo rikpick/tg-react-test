@@ -15,7 +15,7 @@ const ProductItem = ({product, className, onAdd}) => {
          <div className={'title'}>{product.title}</div>
          <div className={'description'}>{product.description}</div>
          <div className={'price'}>
-            <span>Цена: <b>{product.price}</b></span>
+            <span><b>₴{product.price}</b></span>
          </div>
          <Button className={'add-btn'} onClick={onAddHandler}>
                 В корзину
