@@ -1,7 +1,6 @@
 .product {
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     padding: 15px;
     width: 170px;
 }
@@ -11,6 +10,10 @@
     background: lightgray;
     height: 50px;
     margin: 0 auto;
+}
+
+.img img {
+    height: 50px;
 }
 
 .description {
