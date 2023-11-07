@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import './productlist.css';
 import { useTelegram } from "../../hooks/useTelegram";
 import ProductItem from "../productitem/productitem";
-import React, { useEffect, useCallback } from "react";
 
 const products = [
     {id: '1', title: '1g', price: 699, description: '1 gr'},
