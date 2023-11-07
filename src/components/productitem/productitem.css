@@ -1,6 +1,7 @@
 .product {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
     width: 100px;
 }
@@ -10,13 +11,13 @@
     justify-content: center;
     width: 100%;
     background: var(--tg-theme-bg-color);
-    height: 50px;
+    height: 100px;
     margin: 0 auto;
     margin-bottom: 5px;
 }
 
 .img img {
-    height: 50px;
+    height: 100px;
 }
 
 .description {
@@ -36,7 +37,7 @@
 .price-and-title {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
     font-size: 12px;
     margin-bottom: 5px;
 }
