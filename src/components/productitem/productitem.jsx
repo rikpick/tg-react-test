@@ -13,7 +13,7 @@ const ProductItem = ({product, className, onAdd}) => {
        <div className={'product ' + className}>
          <div className={'img'}><img src={clever}/></div>
          <div className={'title'}>{product.title}</div>
-         <div className={'description'}>{product.description}</div>
+         {/*<div className={'description'}>{product.description}</div>*/}
          <div className={'price'}>
             <span><b>₴{product.price}</b></span>
          </div>
