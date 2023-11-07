@@ -1,7 +1,7 @@
 import React from "react";
 import './productitem.css';
 import Button from "../button/button";
-import clever from "public\clever.png"
+import clever from "./clever.png"
 
 const ProductItem = ({product, className, onAdd}) => {
     
