@@ -29,13 +29,13 @@
     height: 30px;
     font-size: 12px;
     font-weight: 500;
-    background-color: #23a123;
+    background-color: #009400;
     color: var(--tg-theme-text-color);
     border-radius: 6px;
 }
 
 .add-btn:active {
-    background-color: #209620;
+    background-color: #028d02;
     transform: translateY(1px);
 }
 
