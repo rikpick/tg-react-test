@@ -28,7 +28,7 @@ const ProductList = () => {
            totalPrice: getTotalPrice(addedItems),
            queryId,
         }
-        fetch('cautious-laugh-production.up.railway.app/web-data', {
+        fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
