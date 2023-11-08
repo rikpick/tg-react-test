@@ -28,7 +28,7 @@ const ProductList = () => {
            totalPrice: getTotalPrice(addedItems),
            queryId,
         }
-        fetch('cautious-laugh-production.up.railway.app', {
+        fetch('cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -66,7 +66,6 @@ const ProductList = () => {
                 text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
                 color: "#009400"
             });
-            tg.MainButton.onClick(chatId, onSendData)
         }
 
     }
