@@ -3,6 +3,8 @@ import './productlist.css';
 import { useTelegram } from "../../hooks/useTelegram";
 import ProductItem from "../productitem/productitem";
 
+const chatId = '6852995611';
+
 const products = [
     {id: '1', title: '1 шт', price: 699, description: '1 gr'},
     {id: '2', title: '2 шт', price: 1499, description: '2 gr'},
@@ -64,6 +66,7 @@ const ProductList = () => {
                 text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
                 color: "#009400"
             });
+            tg.MainButton.onClick(chatId, onSendData)
         }
 
     }
