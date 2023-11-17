@@ -12,7 +12,7 @@ const toggle = (btn) => {
 
 window.addEventListener('DOMContentLoaded', function () {
     init();
-    document.querySelectorAll(".add-btn").addEventListener("click", toggle, false);
+    document.querySelectorAll(".add-btn").addEventListener("click", toggle(), false);
   });
 
 const ProductItem = ({product, className, onAdd}) => {
