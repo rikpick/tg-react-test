@@ -9,14 +9,12 @@ const ProductItem = ({product, className, onAdd}) => {
         onAdd(product)
 
         document.querySelectorAll(".add-btn").forEach(btn => {
-            if(btn.target.classList.contains("toggle")) {
-                btn.target.textContent = "В корзину";
-                btn.target.classList.remove("toggle");
-            } else {
-                btn.target.textContent = "Удалить";
-                btn.target.classList.add("toggle");
-            }
-            
+            btn.addEventListener("click", (event) => {
+              const btnToToggle = event.currentTarget
+        
+              btnToToggle.classList.toggle("toggle")
+              btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
+            })
           })
          }
     
