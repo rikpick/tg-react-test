@@ -14,7 +14,6 @@ const ProductItem = ({product, className, onAdd}) => {
           })
     }
 
-    toggle(btn);
     
     const onAddHandler = () => {
         onAdd(product)
