@@ -3,23 +3,32 @@ import './productitem.css';
 import Button from "../button/button";
 import clever from "./clever.png"
 
-const ProductItem = ({product, className, onAdd}) => {
-
-    const toggle = (btn) => {
-        btn.addEventListener("click", (event) => {
-            const btnToToggle = event.currentTarget
+const toggle = (btn) => {
+    const btnToToggle = event.currentTarget
       
             btnToToggle.classList.toggle("toggle")
             btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
-          })
-    }
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+    init();
+    document.querySelectorAll(".add-btn").addEventListener("click", toggle, false);
+  });
+
+const ProductItem = ({product, className, onAdd}) => {
+
 
     
     const onAddHandler = () => {
         onAdd(product)
 
         document.querySelectorAll(".add-btn").forEach(btn => {
-            toggle(btn);
+            btn.addEventListener("click", (event) => {
+                const btnToToggle = event.currentTarget
+          
+                btnToToggle.classList.toggle("toggle")
+                btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
+              })
           })
          }
     
