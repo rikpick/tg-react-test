@@ -15,7 +15,7 @@ const ProductItem = ({product, className, onAdd}) => {
           
                 btnToToggle.classList.toggle("toggle")
                 btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
-              }, {once : true})
+              })
           })
          }
     
