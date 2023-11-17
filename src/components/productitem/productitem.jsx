@@ -4,17 +4,21 @@ import Button from "../button/button";
 import clever from "./clever.png"
 
 const ProductItem = ({product, className, onAdd}) => {
+
+    const toggle = (btn) => {
+        btn.addEventListener("click", (event) => {
+            const btnToToggle = event.currentTarget
+      
+            btnToToggle.classList.toggle("toggle")
+            btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
+          })
+    }
     
     const onAddHandler = () => {
         onAdd(product)
 
         document.querySelectorAll(".add-btn").forEach(btn => {
-            btn.addEventListener("click", (event) => {
-              const btnToToggle = event.currentTarget
-        
-              btnToToggle.classList.toggle("toggle")
-              btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
-            })
+            toggle(btn);
           })
          }
     
