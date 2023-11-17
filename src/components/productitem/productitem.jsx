@@ -7,6 +7,17 @@ const ProductItem = ({product, className, onAdd}) => {
     
     const onAddHandler = () => {
         onAdd(product)
+        document.querySelectorAll(".add-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+              btn.classList.toggle("toggle")
+        
+              if (btn.classList.contains("toggle")) {
+                btn.textContent = "Удалить"
+              } else {
+                btn.textContent = "В корзину"
+              }
+            })
+          })
     }
     
     return (

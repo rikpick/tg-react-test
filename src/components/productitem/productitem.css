@@ -46,3 +46,7 @@
     font-size: 12px;
     margin-bottom: 5px;
 }
+
+.toggle {
+    background-color: rgb(248, 54, 54);
+}
