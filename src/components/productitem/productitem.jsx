@@ -13,6 +13,8 @@ const ProductItem = ({product, className, onAdd}) => {
             btnToToggle.textContent = btnToToggle.classList.contains("toggle") ? "Удалить" : "В корзину"
           })
     }
+
+    toggle(btn);
     
     const onAddHandler = () => {
         onAdd(product)
