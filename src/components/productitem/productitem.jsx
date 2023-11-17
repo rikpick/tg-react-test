@@ -7,16 +7,18 @@ const ProductItem = ({product, className, onAdd}) => {
     
     const onAddHandler = () => {
         onAdd(product)
-        document.querySelectorAll(".add-btn").addEventListener("click", () => {
 
         document.querySelectorAll(".add-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-              btn.classList.toggle("toggle")
-              btn.textContent = btn.classList.contains("toggle") ? "Удалить" : "В корзину"
-            })
+            if(btn.classList.contains("toggle")) {
+                btn.textContent = "В корзину";
+                btn.classList.remove("toggle");
+            } else {
+                btn.textContent = "Удалить";
+                btn.classList.add("toggle");
+            }
+            
           })
          }
-    )}
     
     return (
        <div className={'product ' + className}>
