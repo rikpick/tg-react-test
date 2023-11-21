@@ -38,7 +38,7 @@ const ProductList = ({dost}) => {
             body: JSON.stringify(data)
         })
 
-    }, [addedItems, queryId])
+    }, [addedItems, queryId, dost])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
