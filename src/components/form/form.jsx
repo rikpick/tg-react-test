@@ -6,8 +6,6 @@ const Form = () => {
     const [dost, setDost] = useState('central')
 
 
-
-
     const onChangeDost = (e) => {
         setDost(e.target.value)
     }
