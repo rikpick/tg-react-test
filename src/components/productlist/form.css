@@ -16,7 +16,7 @@
     margin-top: 15px;
     -webkit-appearance: none;
     font-size: 14px;
-    color: rgb(41, 41, 41);
+    color: var(--tg-theme-text-color);
     background: url(/src/components/productlist/arrow.png) no-repeat 0 0;
     background-size: 10px;
     background-position-x: 97%;
