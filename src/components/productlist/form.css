@@ -14,4 +14,6 @@
 .select {
     padding: 10px;
     margin-top: 15px;
+    -webkit-appearance: none;
+    color: rgb(61, 61, 61);
 }
