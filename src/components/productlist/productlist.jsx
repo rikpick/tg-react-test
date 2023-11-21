@@ -38,7 +38,7 @@ const ProductList = () => {
             body: JSON.stringify(data)
         })
 
-    }, [addedItems, queryId, address])
+    }, [addedItems, queryId])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -80,7 +80,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
-            <Form/> 
+            <Form dost={dost}/> 
             
 
         </div>
