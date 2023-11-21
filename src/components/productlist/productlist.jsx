@@ -23,6 +23,7 @@ const {user, onClose} = useTelegram()
 const ProductList = () => { 
     const [addedItems, setAddedItems] = useState([]);
     const [dost, setDost] = useState('amur')
+    const [pay, setPay] = useState('card')
 
 
     const {tg, queryId} = useTelegram();
@@ -33,7 +34,8 @@ const ProductList = () => {
            totalPrice: getTotalPrice(addedItems),
            queryId,
            address: dost,
-           username: user?.id
+           username: user?.id,
+           pay
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
@@ -80,6 +82,10 @@ const ProductList = () => {
     const onChangeDost = (e) => {
         setDost(e.target.value)
     }
+
+    const onChangePay = (e) => {
+        setPay(e.target.value)
+    }
     return (
         <div className={'list'}>
             {products.map(item => (
@@ -94,6 +100,11 @@ const ProductList = () => {
         
         <select value={dost} onChange={onChangeDost} className={'select'}>
             <option value={'amur'}>Амур-Нижнеднепровский</option>
+        </select>
+
+        <select value={pay} onChange={onChangePay} className={'select'}>
+            <option value={'card'}>Оплата на карту</option>
+            <option value={'crypto'}>Криптовалюта</option>
         </select>
 
        </div>
