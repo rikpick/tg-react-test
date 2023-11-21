@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import './productlist.css';
 import { useTelegram } from "../../hooks/useTelegram";
 import ProductItem from "../productitem/productitem";
-import Form from '../form/form';
 
 const chatId = '6852995611';
 
@@ -22,12 +21,6 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const [dost, setDost] = useState('central')
 
-
-
-
-    const onChangeDost = (e) => {
-        setDost(e.target.value)
-    }
 
     const {tg, queryId} = useTelegram();
 
@@ -78,6 +71,10 @@ const ProductList = () => {
             });
         }
 
+    }
+
+    const onChangeDost = (e) => {
+        setDost(e.target.value)
     }
     return (
         <div className={'list'}>
