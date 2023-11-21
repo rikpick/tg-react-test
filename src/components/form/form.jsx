@@ -4,7 +4,6 @@ import { useTelegram } from "../../hooks/useTelegram";
 
 const Form = () => {
     const [dost, setDost] = useState('central')
-    const {tg} = useTelegram();
 
 
 

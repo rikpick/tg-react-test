@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import './productlist.css';
 import { useTelegram } from "../../hooks/useTelegram";
 import ProductItem from "../productitem/productitem";
-import { Form } from '../form/form';
+import Form from '../form/form';
 
 const chatId = '6852995611';
 
@@ -18,8 +18,16 @@ const getTotalPrice = (items = []) => {
     }, 0)
 }
 
-const ProductList = ({dost}) => { 
+const ProductList = () => { 
     const [addedItems, setAddedItems] = useState([]);
+    const [dost, setDost] = useState('central')
+
+
+
+
+    const onChangeDost = (e) => {
+        setDost(e.target.value)
+    }
 
     const {tg, queryId} = useTelegram();
 
@@ -80,7 +88,16 @@ const ProductList = ({dost}) => {
                     className={'item'}
                 />
             ))}
-            <Form/> 
+            <div className={"form"}>
+        <h3>Район доставки</h3>
+        
+        <select value={dost} onChange={onChangeDost} className={'select'}>
+            <option value={'central'}>Центр</option>
+            <option value={'topol'}>Тополь</option>
+            <option value={'vokzal'}>Вокзал</option>
+        </select>
+
+       </div>
             
 
         </div>
