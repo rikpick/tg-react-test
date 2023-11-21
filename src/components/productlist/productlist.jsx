@@ -80,7 +80,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
-            <Form dost={dost}/> 
+            <Form/> 
             
 
         </div>
