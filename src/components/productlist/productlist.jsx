@@ -78,8 +78,8 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
+            <Form/>
 
-             <From/>
         </div>
 
 
