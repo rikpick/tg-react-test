@@ -18,7 +18,7 @@ const getTotalPrice = (items = []) => {
     }, 0)
 }
 
-const ProductList = () => { 
+const ProductList = ({dost}) => { 
     const [addedItems, setAddedItems] = useState([]);
 
     const {tg, queryId} = useTelegram();
