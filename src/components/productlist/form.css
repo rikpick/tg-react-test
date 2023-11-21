@@ -19,7 +19,8 @@
     color: rgb(41, 41, 41);
     background: url(/src/components/productlist/arrow.png) no-repeat 0 0;
     background-size: 10px;
-    background-position-x: right;
+    background-position-x: 97%;
     background-position-y: center;
+    
     
 }

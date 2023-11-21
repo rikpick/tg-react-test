@@ -18,6 +18,8 @@ const getTotalPrice = (items = []) => {
     }, 0)
 }
 
+const {user, onClose} = useTelegram()
+
 const ProductList = () => { 
     const [addedItems, setAddedItems] = useState([]);
     const [dost, setDost] = useState('central')
@@ -31,6 +33,7 @@ const ProductList = () => {
            totalPrice: getTotalPrice(addedItems),
            queryId,
            address: dost,
+           username: user?.username
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
