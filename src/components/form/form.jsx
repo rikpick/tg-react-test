@@ -3,7 +3,7 @@ import './form.css';
 import { useTelegram } from "../../hooks/useTelegram";
 import { useCallback } from "react";
 
-const Form = () => {
+const Form = ({dost}) => {
     const [dost, setDost] = useState('central')
     const {tg} = useTelegram();
 

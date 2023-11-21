@@ -60,7 +60,7 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-        if(newItems.length === 0 & !dost) {
+        if(newItems.length === 0) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
@@ -80,7 +80,7 @@ const ProductList = () => {
                     className={'item'}
                 />
             ))}
-            <Form/> 
+            <Form dost={dost}/> 
             
 
         </div>
