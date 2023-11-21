@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import './form.css';
 import { useTelegram } from "../../hooks/useTelegram";
-import { useCallback } from "react";
 
-const Form = ({dost}) => {
+const Form = () => {
     const [dost, setDost] = useState('central')
     const {tg} = useTelegram();
 
