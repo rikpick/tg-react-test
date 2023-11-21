@@ -28,6 +28,7 @@ const ProductList = () => {
            products: addedItems,
            totalPrice: getTotalPrice(addedItems),
            queryId,
+           address: dost,
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
@@ -59,7 +60,7 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-        if(newItems.length === 0) {
+        if(newItems.length === 0 & !dost) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
