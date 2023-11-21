@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import './form.css';
 import { useTelegram } from "../../hooks/useTelegram";
 
 const Form = () => {
