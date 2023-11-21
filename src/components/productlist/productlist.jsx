@@ -28,7 +28,7 @@ const ProductList = ({dost}) => {
            products: addedItems,
            totalPrice: getTotalPrice(addedItems),
            queryId,
-           address: dost,
+           dost,
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
@@ -38,7 +38,7 @@ const ProductList = ({dost}) => {
             body: JSON.stringify(data)
         })
 
-    }, [addedItems, queryId, dost])
+    }, [addedItems, queryId])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
