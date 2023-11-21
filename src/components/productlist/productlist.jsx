@@ -29,7 +29,7 @@ const ProductList = () => {
            products: addedItems,
            totalPrice: getTotalPrice(addedItems),
            queryId,
-           dost,
+           address: dost,
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
