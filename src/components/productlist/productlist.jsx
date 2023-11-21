@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import './productlist.css';
 import { useTelegram } from "../../hooks/useTelegram";
 import ProductItem from "../productitem/productitem";
-import Form from '../form/form';
+import { Form } from '../form/form';
 
 const chatId = '6852995611';
 
