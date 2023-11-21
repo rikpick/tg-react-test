@@ -102,6 +102,8 @@ const ProductList = () => {
             <option value={'amur'}>Амур-Нижнеднепровский</option>
         </select>
 
+        <h3>Способ оплаты</h3>
+
         <select value={pay} onChange={onChangePay} className={'select'}>
             <option value={'card'}>Оплата на карту</option>
             <option value={'crypto'}>Криптовалюта</option>
