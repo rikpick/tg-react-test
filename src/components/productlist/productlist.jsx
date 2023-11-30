@@ -6,6 +6,7 @@ import ProductItem from "../productitem/productitem";
 
 const chatId = '6852995611';
 
+
 const products = [
     {id: '1', title: '1 шт', price: 300, description: '1 gr'},
     {id: '2', title: '2 шт', price: 600, description: '2 gr'},
@@ -17,6 +18,23 @@ const getTotalPrice = (items = []) => {
         return acc += item.price
     }, 0)
 }
+
+const getKladName = () => {
+    if (klad === 'klad') {
+        tg.MainButton.setParams({
+            text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+            color: "#009400"
+        });
+    } else if (klad === 'nova-pochta') {
+        tg.MainButton.setParams({
+            text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
+            color: "#009400"
+        });
+
+    }
+}
+
+getKladName();
 
 
 const {user, onClose} = useTelegram()
@@ -108,19 +126,6 @@ const ProductList = () => {
 
     const onChangeKlad = (e) => {
         setKlad(e.target.value)
-
-        if (klad === 'klad') {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-                color: "#009400"
-            });
-        } else if (klad === 'nova-pochta') {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-                color: "#009474"
-            });
-
-        }
     }
 
     return (
