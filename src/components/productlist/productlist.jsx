@@ -122,8 +122,8 @@ const ProductList = () => {
     }
 
     const twoCalls = (e) => {
-        this.onChangeKlad(e)
-        this.getKladName()
+        onChangeKlad()
+        getKladName()
       }
 
     return (
