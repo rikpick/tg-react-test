@@ -19,17 +19,6 @@ const getTotalPrice = (items = []) => {
     }, 0)
 }
 
-const getKladName = () => {
-    if (klad === 'klad') {
-        tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems)}`);
-    } else if (klad === 'nova-pochta') {
-        tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems) + 50}`);
-
-    }
-}
-
-
-
 const {user, onClose} = useTelegram()
 
 const ProductList = () => { 
@@ -121,10 +110,6 @@ const ProductList = () => {
         setKlad(e.target.value)
     }
 
-    const twoCalls = (e) => {
-        onChangeKlad()
-        getKladName()
-      }
 
     return (
 
@@ -153,7 +138,7 @@ const ProductList = () => {
 
         <h3>Способ доставки</h3>
 
-        <select value={klad} onChange={twoCalls} className={'select'}>
+        <select value={klad} onChange={onChangeKlad} className={'select'}>
             <option value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
