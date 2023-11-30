@@ -103,11 +103,6 @@ const ProductList = () => {
     return (
 
         <div className={'list'}>
-            <h3>Сорт</h3>
-
-<select value={sort} onChange={onChangeSort} className={'select'}>
-    <option value={'amnesia'}>Amnesia</option>
-</select>
 
             {products.map(item => (
                 <ProductItem
@@ -117,6 +112,13 @@ const ProductList = () => {
                 />
             ))}
             <div className={"form"}>
+
+        <h3>Сорт</h3>
+
+        <select value={sort} onChange={onChangeSort} className={'select'}>
+            <option value={'amnesia'}>Amnesia</option>
+        </select>
+
         <h3>Район доставки</h3>
         
         <select value={dost} onChange={onChangeDost} className={'select'}>
