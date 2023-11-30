@@ -76,21 +76,20 @@ const ProductList = () => {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-                color: "#009400"
-            });
+            if (klad === 'klad') {
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+                    color: "#009400"
+                });
+            } else {
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
+                    color: "#009400"
+                });
+            }
+            
         }
 
-        if (klad === 'klad') {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-            });
-        } else {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems) + 50}`,
-            });
-        }
 
     }
 
