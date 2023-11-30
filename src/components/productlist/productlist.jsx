@@ -18,6 +18,14 @@ const getTotalPrice = (items = []) => {
     }, 0)
 }
 
+const getPrice = () => {
+    if (klad === 'klad') {
+        getTotalPrice(newItems)
+    } else {
+        getTotalPrice(newItems) + 50
+    }
+}
+
 const {user, onClose} = useTelegram()
 
 const ProductList = () => { 
@@ -76,18 +84,10 @@ const ProductList = () => {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
-            if (klad === 'klad') {
-                tg.MainButton.setParams({
-                    text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-                    color: "#009400"
-                });
-            } else {
-                tg.MainButton.setParams({
-                    text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-                    color: "#009400"
-                });
-            }
-            
+            tg.MainButton.setParams({
+                text: `Оформить заказ  ₴${getPrice}`,
+                color: "#009400"
+            });
         }
 
 
