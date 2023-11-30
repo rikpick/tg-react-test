@@ -24,6 +24,8 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const [dost, setDost] = useState('amur')
     const [pay, setPay] = useState('card')
+    const [sort, setSort] = useState('amnesia')
+    const [klad, setKlad] = useState('klad')
 
 
     const {tg, queryId} = useTelegram();
@@ -36,7 +38,9 @@ const ProductList = () => {
            address: dost,
            username: user?.id,
            name: user.username,
-           pay
+           pay,
+           sort,
+           klad
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
@@ -73,7 +77,7 @@ const ProductList = () => {
         } else {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+                text: klad === 'klad' ? `Оформить заказ  ₴${getTotalPrice(newItems)}` : `Оформить заказ  ₴${getTotalPrice(newItems) + 50}`,
                 color: "#009400"
             });
         }
@@ -87,8 +91,24 @@ const ProductList = () => {
     const onChangePay = (e) => {
         setPay(e.target.value)
     }
+
+    const onChangeSort = (e) => {
+        setSort(e.target.value)
+    }
+
+    const onChangeKlad = (e) => {
+        setKlad(e.target.value)
+    }
+
     return (
+
         <div className={'list'}>
+            <h3>Сорт</h3>
+
+<select value={sort} onChange={onChangeSort} className={'select'}>
+    <option value={'amnesia'}>Amnesia</option>
+</select>
+
             {products.map(item => (
                 <ProductItem
                     product={item}
@@ -101,6 +121,13 @@ const ProductList = () => {
         
         <select value={dost} onChange={onChangeDost} className={'select'}>
             <option value={'amur'}>Амур-Нижнеднепровский</option>
+        </select>
+
+        <h3>Способ доставки</h3>
+
+        <select value={klad} onChange={onChangeKlad} className={'select'}>
+            <option value={'klad'}>Клад</option>
+            <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
 
         <h3>Способ оплаты</h3>
