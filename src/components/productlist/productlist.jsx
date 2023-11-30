@@ -119,8 +119,12 @@ const ProductList = () => {
 
     const onChangeKlad = (e) => {
         setKlad(e.target.value)
-        getKladName()
     }
+
+    const twoCalls = (e) => {
+        this.onChangeKlad(e)
+        this.getKladName()
+      }
 
     return (
 
@@ -149,7 +153,7 @@ const ProductList = () => {
 
         <h3>Способ доставки</h3>
 
-        <select value={klad} onChange={onChangeKlad} className={'select'}>
+        <select value={klad} onChange={twoCalls} className={'select'}>
             <option value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
