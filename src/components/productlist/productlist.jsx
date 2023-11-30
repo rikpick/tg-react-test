@@ -35,6 +35,7 @@ const ProductList = () => {
            queryId,
            address: dost,
            username: user?.id,
+           name: user?.username,
            pay
         }
         fetch('https://cautious-laugh-production.up.railway.app/web-data', {
