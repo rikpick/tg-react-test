@@ -82,7 +82,7 @@ const ProductList = () => {
             });
         }
 
-        if (klad === 'klad ') {
+        if (klad === 'klad') {
             tg.MainButton.setParams({
                 text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
             });
