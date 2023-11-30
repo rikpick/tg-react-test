@@ -21,20 +21,13 @@ const getTotalPrice = (items = []) => {
 
 const getKladName = () => {
     if (klad === 'klad') {
-        tg.MainButton.setParams({
-            text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-            color: "#009400"
-        });
+        tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems)}`);
     } else if (klad === 'nova-pochta') {
-        tg.MainButton.setParams({
-            text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-            color: "#009400"
-        });
+        tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems) + 50}`);
 
     }
 }
 
-getKladName();
 
 
 const {user, onClose} = useTelegram()
@@ -126,6 +119,7 @@ const ProductList = () => {
 
     const onChangeKlad = (e) => {
         setKlad(e.target.value)
+        getKladName()
     }
 
     return (
