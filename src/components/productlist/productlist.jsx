@@ -14,12 +14,7 @@ const products = [
 
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
-        if (klad === 'klad') {
-            return acc += item.price +50
-        } else {
-            return acc += item.price
-        }
-        
+        return acc += item.price
     }, 0)
 }
 
@@ -84,6 +79,16 @@ const ProductList = () => {
             tg.MainButton.setParams({
                 text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
                 color: "#009400"
+            });
+        }
+
+        if (klad === 'klad ') {
+            tg.MainButton.setParams({
+                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+            });
+        } else {
+            tg.MainButton.setParams({
+                text: `Оформить заказ  ₴${getTotalPrice(newItems) + 50}`,
             });
         }
 
