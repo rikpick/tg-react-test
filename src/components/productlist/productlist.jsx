@@ -14,7 +14,7 @@ const products = [
 
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
-        if (klad = 'klad') {
+        if (klad === 'klad') {
             return acc += item.price +50
         } else {
             return acc += item.price
