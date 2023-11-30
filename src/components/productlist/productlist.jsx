@@ -117,7 +117,7 @@ const ProductList = () => {
         } else if (klad === 'nova-pochta') {
             tg.MainButton.setParams({
                 text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-                color: "#009400"
+                color: "#009474"
             });
 
         }
