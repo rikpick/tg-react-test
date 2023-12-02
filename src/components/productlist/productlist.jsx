@@ -26,7 +26,7 @@ const ProductList = () => {
     const [dost, setDost] = useState('amur')
     const [pay, setPay] = useState('card')
     const [sort, setSort] = useState('amnesia')
-    const [klad, setKlad] = useState('klad')
+    const [klad, setKlad] = useState()
 
 
     const {tg, queryId} = useTelegram();
@@ -75,7 +75,7 @@ const ProductList = () => {
 
         if(newItems.length === 0) {
             tg.MainButton.hide();
-        } else {
+        } else if (newItems.length != 0 && klad){
             tg.MainButton.show();
             if (klad === 'klad') {
                 tg.MainButton.setParams({
@@ -107,16 +107,7 @@ const ProductList = () => {
     }
 
     const onChangeKlad = (e) => {
-        setKlad(e.target.value)
-
-        if (e.target.value === 'klad') {
-            tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems)}`)
-        } else if (e.target.value === 'nova-pochta') {
-            tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems) + 50}`)
-
-        }
-    
-        
+        setKlad(e.target.value)        
     }
 
 
