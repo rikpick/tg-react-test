@@ -26,7 +26,7 @@ const ProductList = () => {
     const [dost, setDost] = useState('amur')
     const [pay, setPay] = useState('card')
     const [sort, setSort] = useState('amnesia')
-    const [klad, setKlad] = useState('')
+    const [klad, setKlad] = useState('klad')
 
 
     const {tg, queryId} = useTelegram();
