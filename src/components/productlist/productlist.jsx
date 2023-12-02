@@ -26,7 +26,7 @@ const ProductList = () => {
     const [dost, setDost] = useState('amur')
     const [pay, setPay] = useState('card')
     const [sort, setSort] = useState('amnesia')
-    const [klad, setKlad] = useState('')
+    const [klad, setKlad] = useState('klad')
 
 
 
@@ -74,23 +74,26 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-    }
-
-    if(newItems.length === 0 && kald === '') {
-        tg.MainButton.hide();
-    } else if (newItems.length !== 0 && klad === 'klad') {
-        tg.MainButton.show();
-        tg.MainButton.setParams({
-            text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-            color: "#009400"
-        });} else if (newItems.length !== 0 && klad === 'nova-pochta') {
+        if(newItems.length === 0) {
+            tg.MainButton.hide();
+        } else {
             tg.MainButton.show();
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-                color: "#009400"
-            });
-
+            if (klad === 'klad') {
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+                    color: "#009400"
+                });
+            } else if (klad === 'nova-pochta') {
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
+                    color: "#009400"
+                });
+    
+            }
         }
+
+
+    }
 
     const onChangeDost = (e) => {
         setDost(e.target.value)
@@ -137,7 +140,6 @@ const ProductList = () => {
         <h3>Способ доставки</h3>
 
         <select value={klad} onChange={onChangeKlad} className={'select'}>
-            <option value={'none'}>Выбрать</option>
             <option value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
