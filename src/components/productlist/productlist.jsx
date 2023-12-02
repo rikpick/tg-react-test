@@ -26,7 +26,7 @@ const ProductList = () => {
     const [dost, setDost] = useState('amur')
     const [pay, setPay] = useState('card')
     const [sort, setSort] = useState('amnesia')
-    const [klad, setKlad] = useState()
+    const [klad, setKlad] = useState('')
 
 
     const {tg, queryId} = useTelegram();
@@ -75,7 +75,7 @@ const ProductList = () => {
 
         if(newItems.length === 0) {
             tg.MainButton.hide();
-        } else if (newItems.length != 0 && klad){
+        } else {
             tg.MainButton.show();
             if (klad === 'klad') {
                 tg.MainButton.setParams({
