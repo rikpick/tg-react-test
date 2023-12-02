@@ -28,24 +28,7 @@ const ProductList = () => {
     const [pay, setPay] = useState('card')
     const [sort, setSort] = useState('amnesia')
     const [klad, setKlad] = useState('klad')
-
-    useEffect(() => {
-        if (klad === 'klad') {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
-                color: "#009400"
-            });
-        } else if (klad === 'nova-pochta') {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-                color: "#009400"
-            });
     
-        }
-    }, [klad])
-    
-
-
 
     const {tg, queryId} = useTelegram();
 
