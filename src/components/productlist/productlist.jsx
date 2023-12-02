@@ -82,6 +82,7 @@ const ProductList = () => {
                 text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
                 color: "#009400"
             });} else if (newItems.length !== 0 && klad === 'nova-pochta') {
+                tg.MainButton.show();
                 tg.MainButton.setParams({
                     text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
                     color: "#009400"
@@ -138,6 +139,7 @@ const ProductList = () => {
         <h3>Способ доставки</h3>
 
         <select value={klad} onChange={onChangeKlad} className={'select'}>
+            <option value={'none'}>Выбрать</option>
             <option value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
