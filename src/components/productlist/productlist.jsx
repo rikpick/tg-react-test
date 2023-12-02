@@ -74,25 +74,23 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
-        if(newItems.length === 0 && kald === '') {
-            tg.MainButton.hide();
-        } else if (newItems.length !== 0 && klad === 'klad') {
+    }
+
+    if(newItems.length === 0 && kald === '') {
+        tg.MainButton.hide();
+    } else if (newItems.length !== 0 && klad === 'klad') {
+        tg.MainButton.show();
+        tg.MainButton.setParams({
+            text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+            color: "#009400"
+        });} else if (newItems.length !== 0 && klad === 'nova-pochta') {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+                text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
                 color: "#009400"
-            });} else if (newItems.length !== 0 && klad === 'nova-pochta') {
-                tg.MainButton.show();
-                tg.MainButton.setParams({
-                    text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
-                    color: "#009400"
-                });
-    
-            }
-        
+            });
 
-
-    }
+        }
 
     const onChangeDost = (e) => {
         setDost(e.target.value)
