@@ -16,7 +16,7 @@ const products = [
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
         return acc += item.price
-    }, 0)
+    }, klad === 'nova-pochta' ? 50 : 0)
 }
 
 const {user, onClose} = useTelegram()
