@@ -110,9 +110,9 @@ const ProductList = () => {
         setKlad(e.target.value)
 
         if (e.target.value === 'klad') {
-            tg.MainButton.text(`Оформить заказ  ₴${getTotalPrice(newItems)}`)
+            tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems)}`)
         } else if (e.target.value === 'nova-pochta') {
-            tg.MainButton.text(`Оформить заказ  ₴${getTotalPrice(newItems) + 50}`)
+            tg.MainButton.setText(`Оформить заказ  ₴${getTotalPrice(newItems) + 50}`)
 
         }
     
