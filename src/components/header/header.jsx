@@ -3,7 +3,7 @@ import Button from "../button/button";
 import { useTelegram } from "../../hooks/useTelegram";
 import './header.css';
 
-const Header = (props, prices) => {
+const Header = (props) => {
     const {user, onClose} = useTelegram()
 
 
@@ -11,7 +11,7 @@ const Header = (props, prices) => {
         <div className={'header'}>
          <Button onClick={onClose}>Закрыть</Button>
          <span className={'username'}>
-            {prices}
+            {user?.username}
          </span>
         </div>
     );
