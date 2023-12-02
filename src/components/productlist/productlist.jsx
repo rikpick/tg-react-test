@@ -108,7 +108,21 @@ const ProductList = () => {
     }
 
     const onChangeKlad = (e) => {
-        setKlad(e.target.value)        
+        setKlad(e.target.value) 
+        
+            if (e.target.value === 'klad') {
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
+                    color: "#009400"
+                });
+            } else if (e.target.value === 'nova-pochta') {
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
+                    color: "#009400"
+                });
+    
+            }
+        
     }
 
 
