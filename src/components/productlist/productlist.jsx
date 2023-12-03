@@ -49,7 +49,7 @@ const ProductList = () => {
                 tg.MainButton.enable();
             }
             
-        }, [addedItems])
+        }, [addedItems, klad])
 
 
     const onSendData = useCallback(() => {
