@@ -36,9 +36,17 @@ const ProductList = () => {
     const cartPrice = klad === 'klad' ? getTotalPrice(addedItems) : getTotalPrice(addedItems) + 50;
 
     useEffect(() => {
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${cartPrice}`,
-            });
+
+            if(addedItems.length === 0) {
+                tg.MainButton.hide();
+            } else {
+                tg.MainButton.hide();
+                tg.MainButton.show();
+                tg.MainButton.setParams({
+                    text: `Оформить заказ  ₴${cartPrice}`,
+                });
+                
+            }
         }, [addedItems])
 
 
