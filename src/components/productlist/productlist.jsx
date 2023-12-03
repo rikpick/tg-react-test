@@ -90,16 +90,10 @@ const ProductList = () => {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
-            if (klad === 'klad') {
-                tg.MainButton.setParams({
-                    color: "#009400"
-                });
-            } else if (klad === 'nova-pochta') {
-                tg.MainButton.setParams({
-                    color: "#009400"
-                });
-    
-            }
+            tg.MainButton.setParams({
+                color: "#009400"
+            });
+            
         }
 
     }
@@ -118,6 +112,12 @@ const ProductList = () => {
 
     const onChangeKlad = (e) => {
         setKlad(e.target.value) 
+        if (e.target.value === 'klad') {
+            cartPrice = getTotalPrice(addedItems);
+        } else if (e.target.value === 'nova-pochta') {
+            cartPrice = getTotalPrice(addedItems) + 50;
+
+        }
         
     }
 
