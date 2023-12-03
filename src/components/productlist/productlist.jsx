@@ -36,18 +36,10 @@ const ProductList = () => {
     const cartPrice = getTotalPrice(addedItems);
 
     useEffect(() => {
-
-        if(newItems.length === 0) {
-        tg.MainButton.hide();} 
-        else {
-            tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Оформить заказ  ₴${cartPrice}`,
             });
-        }
-
-
-    }, [addedItems])
+        }, [addedItems])
 
 
     const onSendData = useCallback(() => {
