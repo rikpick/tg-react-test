@@ -33,7 +33,7 @@ const ProductList = () => {
 
     const {tg, queryId} = useTelegram();
 
-    const cartPrice = getTotalPrice(addedItems);
+    const cartPrice = klad === 'klad' ? getTotalPrice(addedItems) : getTotalPrice(addedItems) + 50;
 
     useEffect(() => {
             tg.MainButton.setParams({
@@ -111,12 +111,6 @@ const ProductList = () => {
 
     const onChangeKlad = (e) => {
         setKlad(e.target.value) 
-        if (e.target.value === 'klad') {
-            cartPrice = getTotalPrice(addedItems);
-        } else if (e.target.value === 'nova-pochta') {
-            cartPrice = getTotalPrice(addedItems) + 50;
-
-        }
         
     }
 
