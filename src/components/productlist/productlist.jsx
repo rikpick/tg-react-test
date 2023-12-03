@@ -145,7 +145,7 @@ const ProductList = () => {
             <option value={'amur'}>Амур-Нижнеднепровский</option>
         </select>
 
-        <h3>Способ доставки `${klad}`</h3>
+        <h3>Способ доставки</h3>
 
         <select value={klad} onChange={onChangeKlad} className={'select'}>
             <option value={'klad'}>Клад</option>
