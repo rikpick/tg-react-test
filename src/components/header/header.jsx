@@ -11,7 +11,7 @@ const Header = (props, cartPrice) => {
         <div className={'header'}>
          <Button onClick={onClose}>Закрыть</Button>
          <span className={'username'}>
-            {user?.username}
+            {cartPrice}
          </span>
         </div>
     );
