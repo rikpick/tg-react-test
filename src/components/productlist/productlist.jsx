@@ -93,7 +93,12 @@ const ProductList = () => {
         setAddedItems(newItems)
 
 
-       
+        if(newItems.length === 0) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+            
+        }
 
     }
 
