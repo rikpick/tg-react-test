@@ -35,6 +35,13 @@ const ProductList = () => {
 
     const cartPrice = getTotalPrice(addedItems);
 
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: `Оформить заказ  ₴${cartPrice}`,
+        }, [addedItems]);
+
+    })
+
 
     const onSendData = useCallback(() => {
         const data = {
@@ -85,12 +92,10 @@ const ProductList = () => {
             tg.MainButton.show();
             if (klad === 'klad') {
                 tg.MainButton.setParams({
-                    text: `Оформить заказ  ₴${getTotalPrice(newItems)}`,
                     color: "#009400"
                 });
             } else if (klad === 'nova-pochta') {
                 tg.MainButton.setParams({
-                    text: `Оформить заказ  ₴${getTotalPrice(newItems) +50}`,
                     color: "#009400"
                 });
     
