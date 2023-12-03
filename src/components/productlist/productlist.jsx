@@ -20,6 +20,7 @@ const getTotalPrice = (items = []) => {
 }
 
 
+
 const {user, onClose} = useTelegram()
 
 const ProductList = () => { 
@@ -31,6 +32,8 @@ const ProductList = () => {
     
 
     const {tg, queryId} = useTelegram();
+
+    const cartPrice = getTotalPrice(addedItems);
 
 
     const onSendData = useCallback(() => {
@@ -75,6 +78,7 @@ const ProductList = () => {
 
         setAddedItems(newItems)
 
+
         if(newItems.length === 0) {
             tg.MainButton.hide();
         } else {
@@ -92,7 +96,6 @@ const ProductList = () => {
     
             }
         }
-
 
     }
 
