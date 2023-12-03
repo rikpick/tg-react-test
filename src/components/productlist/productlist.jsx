@@ -55,7 +55,7 @@ const ProductList = () => {
             tg.MainButton.show();
 
             
-        }, [addedItems, klad])
+        },[])
 
 
     const onSendData = useCallback(() => {
