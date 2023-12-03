@@ -36,6 +36,8 @@ const ProductList = () => {
     const cartPrice = klad === 'klad' ? getTotalPrice(addedItems) : getTotalPrice(addedItems) + 50;
 
     useEffect(() => {
+            tg.MainButton.hide();
+            tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Оформить заказ  ₴${cartPrice}`,
                 color: "#009400"
@@ -93,12 +95,7 @@ const ProductList = () => {
         setAddedItems(newItems)
 
 
-        if(newItems.length === 0) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-            
-        }
+       
 
     }
 
