@@ -40,18 +40,23 @@ const ProductList = () => {
 
             tg.MainButton.show();
 
+            tg.MainButton.isActive ? 
+            tg.MainButton.setParams({
+                color: "#009400",
+                text: `Оформить заказ  ₴${cartPrice}`
+            }) :
+            tg.MainButton.setParams({
+                color: "#808080",
+                text: `Оформить заказ  ₴${cartPrice}`
+            });
+
+
             if (addedItems.length === 0) {
                 tg.MainButton.disable();
-                tg.MainButton.setParams({
-                    color: "#808080",
-                    text: `Оформить заказ  ₴${cartPrice}`
-                });
+               
             } else {
                 tg.MainButton.enable();
-                tg.MainButton.setParams({
-                    color: "#009400",
-                    text: `Оформить заказ  ₴${cartPrice}`
-                });
+                
             }
             
         }, [addedItems, klad])
@@ -98,9 +103,6 @@ const ProductList = () => {
         }
 
         setAddedItems(newItems)
-
-
-       
 
     }
 
