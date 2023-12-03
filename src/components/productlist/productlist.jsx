@@ -33,7 +33,7 @@ const ProductList = () => {
 
     const {tg, queryId} = useTelegram();
 
-    const cartPrice = klad === 'klad' ? getTotalPrice(addedItems) : getTotalPrice(addedItems) + 50;
+    const cartPrice = (klad === 'klad' ? getTotalPrice(addedItems) : getTotalPrice(addedItems) + 50);
 
     useEffect(() => {
             tg.MainButton.hide();
