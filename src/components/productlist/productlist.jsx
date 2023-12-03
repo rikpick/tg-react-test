@@ -41,8 +41,8 @@ const ProductList = () => {
             if (addedItems.length === 0) {
                 tg.MainButton.disable();
                 tg.MainButton.setParams({
-                    color: "#808080",
-                    text: `Оформить заказ  ₴${cartPrice}`
+                    color: "#009400",
+                    text: `Добавьте товар в Корзину`
                 });
             } else {
                 tg.MainButton.enable();
@@ -61,7 +61,7 @@ const ProductList = () => {
     const onSendData = useCallback(() => {
         const data = {
            products: addedItems,
-           totalPrice: getTotalPrice(addedItems),
+           totalPrice: cartPrice,
            queryId,
            address: dost,
            username: user?.id,
