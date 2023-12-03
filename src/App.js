@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header/>
+      <Header cartPrice={cartPrice}/>
        <Routes>
          <Route index element = {<ProductList/>}/>
          <Route path={'/form'} element = {<Form/>}/>

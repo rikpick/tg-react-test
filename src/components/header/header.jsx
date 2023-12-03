@@ -9,7 +9,7 @@ const Header = ({cartPrice}) => {
 
     return (
         <div className={'header'}>
-         <Button onClick={onClose}>Закрыть `${cartPrice}`</Button>
+         <Button onClick={onClose}>Закрыть</Button>
          <span className={'username'}>
            Корзина: {cartPrice}
          </span>
