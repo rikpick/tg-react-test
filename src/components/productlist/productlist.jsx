@@ -36,6 +36,8 @@ const ProductList = () => {
     const cartPrice = getTotalPrice(addedItems);
 
     useEffect(() => {
+        tg.MainButton.hide();
+        tg.MainButton.show();
         tg.MainButton.setParams({
             text: `Оформить заказ  ₴${cartPrice}`,
         }, [addedItems]);
