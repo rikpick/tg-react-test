@@ -37,21 +37,20 @@ const ProductList = () => {
 
     useEffect(() => {
             tg.MainButton.hide();
-            tg.MainButton.setParams({
-                text: `Оформить заказ  ₴${cartPrice}`,
-            });
 
             tg.MainButton.show();
 
             if (addedItems.length === 0) {
                 tg.MainButton.disable();
                 tg.MainButton.setParams({
-                    color: "#808080"
+                    color: "#808080",
+                    text: `Оформить заказ  ₴${cartPrice}`
                 });
             } else {
                 tg.MainButton.enable();
                 tg.MainButton.setParams({
-                    color: "#009400"
+                    color: "#009400",
+                    text: `Оформить заказ  ₴${cartPrice}`
                 });
             }
             
