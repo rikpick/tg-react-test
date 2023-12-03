@@ -139,7 +139,7 @@ const ProductList = () => {
         <h3>Район доставки</h3>
         
         <select value={dost} onChange={onChangeDost} className={'select'}>
-            <option value={'amur'}>Амур-Нижнеднепровский</option>
+            <option value={'amur'}>Амур-Нижнеднепровский `${cartPrice}`</option>
         </select>
 
         <h3>Способ доставки</h3>
