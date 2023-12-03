@@ -36,17 +36,17 @@ const ProductList = () => {
     const cartPrice = klad === 'klad' ? getTotalPrice(addedItems) : getTotalPrice(addedItems) + 50;
 
     useEffect(() => {
+            tg.MainButton.setParams({
+                text: `Оформить заказ  ₴${cartPrice}`,
+                color: "#009400"
+            });
 
-            if(addedItems.length === 0) {
-                tg.MainButton.hide();
+            if (addedItems.length === 0) {
+                tg.MainButton.disable();
             } else {
-                tg.MainButton.hide();
-                tg.MainButton.show();
-                tg.MainButton.setParams({
-                    text: `Оформить заказ  ₴${cartPrice}`,
-                });
-                
+                tg.MainButton.enable();
             }
+            
         }, [addedItems])
 
 
@@ -93,15 +93,7 @@ const ProductList = () => {
         setAddedItems(newItems)
 
 
-        if(newItems.length === 0) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-            tg.MainButton.setParams({
-                color: "#009400"
-            });
-            
-        }
+       
 
     }
 
