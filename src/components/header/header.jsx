@@ -3,7 +3,7 @@ import Button from "../button/button";
 import { useTelegram } from "../../hooks/useTelegram";
 import './header.css';
 
-const Header = (props, cartPrice) => {
+const Header = ({cartPrice}) => {
     const {user, onClose} = useTelegram()
 
 
