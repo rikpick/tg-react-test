@@ -10,8 +10,8 @@ const Header = ({cartPrice}) => {
 
     return (
         <div className={'header'}>
-          <span> </span>
-         <button href="https://t.me/magic_salesman" className="btn">Чат с менеджером</button>
+          <span>Нужна помощь?</span>
+         <button href="@magic_salesman" className="btn">Чат с менеджером</button>
         </div>
     );
 };
