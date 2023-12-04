@@ -10,8 +10,8 @@ const Header = ({cartPrice}) => {
 
     return (
         <div className={'header'}>
-          <span>Нужна помощь?</span>
-         <a href="tg://resolve?domain=<magic_salesman>"><button className="btn">Чат с менеджером</button></a>
+        <span>Нужна помощь?</span>
+        <a className="btn" href="t.me/magic_salesman">Чат с менеджером</a>
         </div>
     );
 };
