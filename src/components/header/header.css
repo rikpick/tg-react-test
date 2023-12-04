@@ -13,11 +13,12 @@
 }
 
 .btn {
-background-color: rgb(141, 255, 126);
+background-color: rgb(255, 229, 111);
 color: rgb(36, 36, 36);
 width: 40%;
 height: 70%;
 border-radius: 6px;
+border: none;
 font-size: 14px;
 font-weight: 500;
 }
