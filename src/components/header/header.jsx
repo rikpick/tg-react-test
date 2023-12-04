@@ -3,13 +3,14 @@ import Button from "../button/button";
 import { useTelegram } from "../../hooks/useTelegram";
 import './header.css';
 
+
 const Header = ({cartPrice}) => {
     const {user, onClose} = useTelegram()
 
 
     return (
         <div className={'header'}>
-         <Button>Чат с менеджером</Button>
+         <button className="btn">Чат с менеджером</button>
 
         </div>
     );
