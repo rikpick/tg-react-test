@@ -30,7 +30,7 @@
     font-size: 14px;
     font-weight: 500;
     background-color: #FFB000;
-    color: var(--tg-theme-text-color);
+    color: rgb(36, 36, 36);
     border-radius: 6px;
 }
 
