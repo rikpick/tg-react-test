@@ -41,15 +41,15 @@ const ProductList = () => {
             if (addedItems.length === 0) {
                 tg.MainButton.setParams({
                     color: "#FFB000",
+                    textColor: "#242424",
                     text: `Добавьте товар в Корзину`,
-                    textColor: "#242424"
                 });
             } else {
                 tg.MainButton.show();
                 tg.MainButton.setParams({
                     color: "#FFB000",
+                    textColor: "#242424",
                     text: `Оформить заказ  ₴${cartPrice}`,
-                    textColor: "#242424"
                 })
             }
 
