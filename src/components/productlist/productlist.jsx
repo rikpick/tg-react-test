@@ -8,9 +8,9 @@ const chatId = '6852995611';
 
 
 const products = [
-    {id: '1', title: '1 гр', price: 300, description: '1 gr'},
-    {id: '2', title: '2 гр', price: 600, description: '2 gr'},
-    {id: '3', title: '5 гр', price: 1500, description: '3 gr'},
+    {id: '1', title: '1 гр.', price: 300, description: '1 gr'},
+    {id: '2', title: '2 гр.', price: 600, description: '2 gr'},
+    {id: '3', title: '5 гр.', price: 1500, description: '3 gr'},
 ]
 
 const getTotalPrice = (items = []) => {
@@ -41,14 +41,14 @@ const ProductList = () => {
             if (addedItems.length === 0) {
                 tg.MainButton.setParams({
                     color: "#FFB000",
-                    textColor: "#242424",
+                    text_color: "#242424",
                     text: `Добавьте товар в Корзину`,
                 });
             } else {
                 tg.MainButton.show();
                 tg.MainButton.setParams({
                     color: "#FFB000",
-                    textColor: "#242424",
+                    text_color: "#242424",
                     text: `Оформить заказ  ₴${cartPrice}`,
                 })
             }
