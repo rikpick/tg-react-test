@@ -12,7 +12,7 @@ const Header = ({cartPrice}) => {
     return (
         <div className={'header'}>
         <span>Нужно больше?</span>
-        <img src={arrow}/>
+        <img className="arrow" src={arrow}/>
         <a href="https://t.me/magic_salesman"><button className="btn">Чат с менеджером</button></a>
         </div>
     );
