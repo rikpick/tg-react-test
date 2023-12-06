@@ -9,8 +9,8 @@ const chatId = '6852995611';
 
 const products = [
     {id: '1', title: '1 гр.', price: 300, description: '1 gr'},
-    {id: '2', title: '2 гр.', price: 600, description: '2 gr'},
-    {id: '3', title: '5 гр.', price: 1500, description: '3 gr'},
+    {id: '2', title: '5 гр.', price: 1500, description: '2 gr'},
+    {id: '3', title: '10 гр.', price: 3000, description: '3 gr'},
 ]
 
 const getTotalPrice = (items = []) => {
