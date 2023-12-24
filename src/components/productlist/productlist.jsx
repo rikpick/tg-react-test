@@ -70,7 +70,7 @@ const ProductList = () => {
            sort: sort,
            klad: klad
         }
-        fetch('https://localhost:3000', {
+        fetch('https://localhost:8000', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
