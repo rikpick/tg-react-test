@@ -70,7 +70,7 @@ const ProductList = () => {
            sort: sort,
            klad: klad
         }
-        fetch('https://gn2vn7k6-8000.euw.devtunnels.ms/web-data', {
+        fetch('https://cautious-laugh-production.up.railway.app/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
