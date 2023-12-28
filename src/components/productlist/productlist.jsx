@@ -25,7 +25,7 @@ const {user, onClose} = useTelegram()
 
 const ProductList = () => { 
     const [addedItems, setAddedItems] = useState([]);
-    const [dost, setDost] = useState('amur')
+    const [dost, setDost] = useState('dnipro')
     const [pay, setPay] = useState('card')
     const [sort, setSort] = useState('amnesia')
     const [klad, setKlad] = useState('klad')
@@ -139,10 +139,12 @@ const ProductList = () => {
             <option value={'amnesia'}>Amnesia</option>
         </select>
 
-        <h3>Район доставки</h3>
+        <h3>Город</h3>
         
         <select value={dost} onChange={onChangeDost} className={'select'}>
-            <option value={'amur'}>Амур-Нижнеднепровский</option>
+            <option value={'dnipro'}>Днепр</option>
+            <option value={'vinnitsa'}>Винница</option>
+            <option value={'uman'}>Умань</option>
         </select>
 
         <h3>Способ доставки</h3>
