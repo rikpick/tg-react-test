@@ -156,8 +156,8 @@ const ProductList = () => {
         <h3>Способ доставки</h3>
 
         <select value={klad} onChange={onChangeKlad} className={'select'}>
-            <option id="visible" value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
+            <option id="visible" value={'klad'}>Клад</option>
         </select>
 
         <h3>Способ оплаты</h3>
