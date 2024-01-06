@@ -119,6 +119,14 @@ const ProductList = () => {
         
     }
 
+    if (dost === ukr) {
+        setKlad('nova-pochta');
+        document.getElementById('disabled').disabled = true;
+    } else if (dost === dnipro) {
+        document.getElementById('disabled').disabled = false;
+        setKlad('klad');
+    }
+
 
     return (
 
@@ -143,14 +151,13 @@ const ProductList = () => {
         
         <select value={dost} onChange={onChangeDost} className={'select'}>
             <option value={'dnipro'}>Днепр</option>
-            <option value={'vinnitsa'}>Винница</option>
-            <option value={'uman'}>Умань</option>
+            <option value={'ukr'}>Вся Украина</option>
         </select>
 
         <h3>Способ доставки</h3>
 
         <select value={klad} onChange={onChangeKlad} className={'select'}>
-            <option value={'klad'}>Клад</option>
+            <option id="disabled" value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
 
