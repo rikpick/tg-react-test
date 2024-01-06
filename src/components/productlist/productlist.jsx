@@ -104,6 +104,11 @@ const ProductList = () => {
 
     const onChangeDost = (e) => {
         setDost(e.target.value)
+        if (dost === ukr) {
+            document.getElementById('visible').style.visibility = "hidden";
+        } else {
+            document.getElementById('visible').style.visibility = "visible";
+        }
     }
 
     const onChangePay = (e) => {
@@ -151,7 +156,7 @@ const ProductList = () => {
         <h3>Способ доставки</h3>
 
         <select value={klad} onChange={onChangeKlad} className={'select'}>
-            <option value={'klad'}>Клад</option>
+            <option id="visible" value={'klad'}>Клад</option>
             <option value={'nova-pochta'}>Новая Почта (почтомат) +50 грн</option>
         </select>
 
