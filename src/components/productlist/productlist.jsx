@@ -27,8 +27,8 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const [dost, setDost] = useState('dnipro')
     const [pay, setPay] = useState('card')
-    const [sort, setSort] = useState('amnesia')
-    const [klad, setKlad] = useState('klad')
+    const [sort, setSort] = useState('ak47')
+    const [klad, setKlad] = useState('nova-pochta')
     
 
     const {tg, queryId} = useTelegram();
@@ -143,7 +143,12 @@ const ProductList = () => {
         <h3>Сорт</h3>
 
         <select value={sort} onChange={onChangeSort} className={'select'}>
-            <option value={'amnesia'}>Amnesia</option>
+            <option value={'ak47'}>АК-47</option>
+            <option value={'tutankhamon'}>Tutankhamon</option>
+            <option value={'superskunk'}>Super Skunk</option>
+            <option value={'lemonhaze'}>Lemon Haze</option>
+            <option value={'brucebenner'}>Bruce Benner</option>
+            <option value={'bigdewil'}>Big Dewil</option>
         </select>
 
         <h3>Город</h3>
