@@ -105,9 +105,9 @@ const ProductList = () => {
     const onChangeDost = (e) => {
         setDost(e.target.value)
         if (e.target.value === 'ukr') {
-            document.getElementById('visible').style.display = "none";
+            document.getElementById('visible').style.visibility = "hidden";
         } else {
-            document.getElementById('visible').style.display = "block";
+            document.getElementById('visible').style.visibility = "visible";
         }
     }
 
