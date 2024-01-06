@@ -105,9 +105,10 @@ const ProductList = () => {
     const onChangeDost = (e) => {
         setDost(e.target.value)
         if (e.target.value === 'ukr') {
-            document.getElementById('visible').style.visibility = "hidden";
+            document.getElementById('visible').disabled = true;
+            setKlad("nova-pochta")
         } else {
-            document.getElementById('visible').style.visibility = "visible";
+            document.getElementById('visible').disabled= false;
         }
     }
 
