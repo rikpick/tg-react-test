@@ -104,10 +104,10 @@ const ProductList = () => {
 
     const onChangeDost = (e) => {
         setDost(e.target.value)
-        if (dost === ukr) {
-            document.getElementById('visible').style.visibility = "hidden";
+        if (e.target.value === ukr) {
+            document.getElementById('visible').style.display = "none";
         } else {
-            document.getElementById('visible').style.visibility = "visible";
+            document.getElementById('visible').style.display = "block";
         }
     }
 
