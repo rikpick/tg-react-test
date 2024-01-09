@@ -76,13 +76,14 @@ const ProductList = () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        })
+        });
+
+        tg.MainButton.disable();
 
     }, [addedItems, queryId, dost, pay, sort, klad])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
-        tg.MainButton.disable();
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
