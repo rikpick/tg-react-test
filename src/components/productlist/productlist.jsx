@@ -27,7 +27,7 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const [dost, setDost] = useState('dnipro')
     const [pay, setPay] = useState('card')
-    const [sort, setSort] = useState('tutankhamon')
+    const [sort, setSort] = useState('superskunk')
     const [klad, setKlad] = useState('nova-pochta')
     
 
@@ -146,7 +146,6 @@ const ProductList = () => {
         <h3>Сорт</h3>
 
         <select value={sort} onChange={onChangeSort} className={'select'}>
-            <option value={'tutankhamon'}>Tutankhamon</option>
             <option value={'superskunk'}>Super Skunk</option>
             <option value={'brucebenner'}>Bruce Benner</option>
             <option value={'bigdewil'}>Big Dewil</option>
