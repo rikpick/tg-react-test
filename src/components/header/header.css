@@ -31,3 +31,17 @@ a {
 .arrow {
     width: 15%;
 }
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.attention {
+    height: 40px;
+    background-color: rgb(255, 18, 18);
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+}
