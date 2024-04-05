@@ -51,7 +51,6 @@ const ProductList = () => {
                     text_color: "#242424",
                     text: `Оформить заказ  ₴${cartPrice}`,
                 });
-                tg.MainButton.disable();
             }
 
 
